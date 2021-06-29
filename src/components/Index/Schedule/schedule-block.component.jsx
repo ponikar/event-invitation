@@ -11,7 +11,7 @@ export const ScheduleBlock = () => {
         <div className="flex w-full">
           <h5 className="text-xs">Darshan Ponikar</h5> 
           <img src="/assets/svgs/time.svg" className="w-3 mx-1" />
-          <span className="text-xs text-info">10:00 to 11:00 </span>
+          <span className="text-xs text-grey">10:00 to 11:00 </span>
         </div>
       </div>
     </section>

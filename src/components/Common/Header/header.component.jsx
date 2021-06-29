@@ -3,7 +3,7 @@ import { Menu, X } from "react-feather";
 import { Link } from "react-router-dom";
 import { PrimaryButton } from "../Button/button.component";
 import { MobileHeader } from "./mobile-header.component";
-import { Hexagon } from "react-feather"
+import { Logo } from "../Logo/logo.component";
 
 export const Header = () => {
   const [menuToggle, setMenuToggle] = useState(false);
@@ -11,11 +11,7 @@ export const Header = () => {
     <>
       <nav style={{ height: "-10px" }} className="w-full border-b border-gr">
         <section className="flex my-4 container items-center justify-between">
-          <header className="text-xl items-center flex"> 
-          <Hexagon className="mr-1 text-primary" size={18} />
-            NXT.Tech
-           </header>
-
+          <Logo />
           <div className="sm:flex hidden w-10/12 justify-end items-center">
             <Link to="/" className="text-sm mx-5">
               Home

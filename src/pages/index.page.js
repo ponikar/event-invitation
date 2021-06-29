@@ -1,5 +1,6 @@
 // Index Page
 
+import { Footer } from "../components/Common/Footer/footer.component";
 import { Header } from "../components/Common/Header/header.component";
 import BlockCollections from "../components/Index/Blocks/block-collections.component";
 import { HeroSection } from "../components/Index/Hero/hero-section.component";
@@ -16,6 +17,7 @@ export const Index = () => {
       <TeamSection />
       <ScheduleSection />
     </main>
+    <Footer />
     </>
   );
 };
