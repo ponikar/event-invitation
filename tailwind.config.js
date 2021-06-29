@@ -11,6 +11,10 @@ module.exports = {
         xl: '6rem',
         '2xl': '8rem',
       },
+      colors :{
+        pc:'#D7D7D7'
+      },
+     
     }
   },
   variants: {
