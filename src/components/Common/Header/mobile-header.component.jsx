@@ -1,14 +1,9 @@
-import { Link } from "react-router-dom"
-import { motion } from "framer-motion"
-import { headerAnimatedProps } from "./mobile-header-animated.props"
-
-const AnimatedLink = motion(Link)
+import { Link } from "react-router-dom";
 
 export const MobileHeader = ({ menuToggle }) => {
-    return <div className="w-full sm:hidden flex flex-col items-center">
-        <AnimatedLink  animate={menuToggle ? "opened" : "closed"} {...headerAnimatedProps} to="/" className="w-full my-2 text-center">Home</AnimatedLink> 
-        <AnimatedLink  animate={menuToggle ? "opened" : "closed"} {...headerAnimatedProps} to="/" className="w-full my-2 text-center">Home</AnimatedLink> 
-        <AnimatedLink  animate={menuToggle ? "opened" : "closed"} {...headerAnimatedProps} to="/" className="w-full my-2 text-center">Home</AnimatedLink> 
-    </div>
-}
-
+  return menuToggle && <nav className="px-5 py-4 border-b border-gr flex flex-col">
+  <Link to="/" className="text-sm my-1"> Home </Link>
+  <Link to="/" className="text-sm my-1"> About </Link>
+  <Link to="/" className="text-sm my-1"> Schedule </Link>
+</nav>
+};

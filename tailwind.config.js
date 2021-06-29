@@ -7,7 +7,8 @@ module.exports = {
         white: "#fff",
         highlight: "#F2F2F2",
         info: "#B2B2B2",
-        gr: "#E0E0E0"
+        gr: "#E0E0E0",
+        primary: "#6C63FF"
       },
       borderRadius: {
         pm: "2.5px",
