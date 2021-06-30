@@ -2,11 +2,11 @@
 import React, { useCallback, useState } from "react";
 import { submitFormAPI } from "../apis/submit-form.api";
 import { Container } from "../components/Common/Container/container.component";
-import { InputBox } from "../components/Register_Event/Input/input.compnent";
 import { PageBase } from "../components/Common/Page-Base/page-base.component";
 import { HeaderTitle } from "../components/Common/Typography/header-title.component";
 import { AnimatedParticles } from "../components/Common/Particles/particles.component";
 import { RegisterForm } from "../components/Register_Event/RegisterForm/register-form.component";
+import { useTitle } from "../hooks/useTitle.component";
 
 const DEFAULT_STATE = {
   userName: "",
@@ -24,6 +24,7 @@ const defaultHelpers = {
 export const RegisterEvent = () => {
   const [viewerRegistration, setViewerRegistration] = useState(DEFAULT_STATE);
   const [helpers, setHelpers] = useState(defaultHelpers);
+  useTitle("NXT.Tech | Regiser Event")
 
   const handleSubmit = useCallback(
     async (e) => {
@@ -32,7 +33,6 @@ export const RegisterEvent = () => {
         setHelpers({ ...defaultHelpers, isLoading: true });
         const response = await submitFormAPI(viewerRegistration);
         const data = await response.json();
-        console.log("working", data);
         // setViewerRegistration(DEFAULT_STATE);
         setHelpers({
           message: "Thank you, See you there!",

@@ -4,14 +4,18 @@ import BlockCollections from "../components/Index/Blocks/block-collections.compo
 import { HeroSection } from "../components/Index/Hero/hero-section.component";
 import { ScheduleSection } from "../components/Index/Schedule/schedule-section.component";
 import { TeamSection } from "../components/Index/Team-Section/team-section.component";
+import { useTitle } from "../hooks/useTitle.component";
 
 export const Index = () => {
+  useTitle("NXT.Tech | Virtual Event");
   return (
-    <PageBase>
+     <>
+     <PageBase>
       <HeroSection />
       <BlockCollections />
       <TeamSection />
       <ScheduleSection />
     </PageBase>
+     </>
   );
 };

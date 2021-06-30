@@ -7,8 +7,10 @@ import { PageBase } from "../components/Common/Page-Base/page-base.component";
 import { HeaderTitle } from "../components/Common/Typography/header-title.component";
 import { Container  } from "../components/Common/Container/container.component"
 import { Member } from "../components/About/member.component";
+import { useTitle } from "../hooks/useTitle.component";
 
 export const About = () => {
+    useTitle("NXT.Tech | Community")
     return <PageBase>
         <HeaderTitle className="mt-24" title="Hello there! Meet with our Community." />
         <Container className="grid sm:grid-cols-4 grid-cols-2 gap-2 sm:w-7/12 w-full">
