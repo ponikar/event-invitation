@@ -25,6 +25,7 @@ module.exports = {
         xl: '6rem',
         '2xl': '8rem',
       },
+    },
     boxShadow: {
        DEFAULT: "0px 4px 50px rgba(255, 255, 255, 0.25)"
     }

@@ -1,60 +1,109 @@
 // RegisterEvent page form
-import React , {useState} from 'react'
-import {InputBox} from "../components/Common/Container/Register_Event/Input/input.compnent";
+import React, { useCallback, useState } from "react";
+import { submitFormAPI } from "../apis/submit-form.api";
+import { Container } from "../components/Common/Container/container.component";
+import { InputBox } from "../components/Common/Container/Register_Event/Input/input.compnent";
+import { PageBase } from "../components/Common/Page-Base/page-base.component";
+import { HeaderTitle } from "../components/Common/Typography/header-title.component"
 
- 
+const DEFAULT_STATE = {
+  userName: "",
+  EmailId: "",
+  Semester: "",
+  department: "",
+  collegeName: "",
+  desc: "",
+}
+const defaultHelpers = {
+  isLoading:false,
+  message: "",
+  success: false
+}
 export const RegisterEvent = () => {
-  
-  const[viewerRegistration,setViewerRegistration]=useState({
-    userName:"",
-    EmailId:"",
-    Semester:"",
-    department:"",
-    collegeName:"",
-    desc:"",
-  });
+  const [viewerRegistration, setViewerRegistration] = useState(DEFAULT_STATE);
+  const [helpers, setHelpers] = useState(defaultHelpers);
 
-  const handleSubmit = (e) =>{
+  const handleSubmit = useCallback(async (e) => {
+    e.preventDefault();
+    try {
+        setHelpers({ ...defaultHelpers, isLoading: true });
+        const response = await submitFormAPI(viewerRegistration);
+        const data = await response.json();
+        console.log("working", data)
+        setViewerRegistration(DEFAULT_STATE);
+        setHelpers({ message: "Thank you, See you there!", isLoading: false, success:true });
+    } catch(e) {
+      setHelpers({ message: "Something went wrong!", isLoading: false, success: false })
+    }
+  }, [viewerRegistration]);
 
-      e.preventDefault();
+  const handleChange = (e) => {
+    const { name, value } = e.target; 
+    setViewerRegistration({ ...viewerRegistration, [name]: value }); 
+  };
 
-      setViewerRegistration({
-        userName:'',
-        EmailId:'',
-        Semester:'',
-        department:'',
-        collegeName:'',
-        desc:''
-      })
-
-  }
-
-  const handleChange = (e)=>{
-    const {name,value} = e.target;
-    setViewerRegistration({[name]:value})
-
-  }
-
-  return(
-    <div>
-        <div className="container text-center my-32">
-          <h1 className="text-5xl">Get Ready to Explore ?</h1>
-        </div>
-    
-        <div className="container bg-white border-4 w-1/3 p-4 rounded mx-auto my-16">
-          <form onSubmit={handleSubmit} >
-              <InputBox label="Enter Your Name" name="userName" placeholder="John Doe" value={viewerRegistration.userName} onChange={handleChange}/>
-              <InputBox label="Email Id" name="EmailId" placeholder="emailaddress@gmail.com" value={viewerRegistration.EmailId} onChange={handleChange}/>
-              <InputBox label="Semester" name="Semester" placeholder="Current Sem" value={viewerRegistration.Semester} onChange={handleChange} /> 
-              <InputBox label="Department" name="department" placeholder="Department" value={viewerRegistration.department} onChange={handleChange} />
-              <InputBox label="College Name" name="college" placeholder="College Name" value={viewerRegistration.collegeName} onChange={handleChange} />
-              <InputBox label="How did you hear about NXT.Tech ?"  name="desc" value={viewerRegistration.desc} onChange={handleChange}/>
-            <button type="submit" className="w-full h-12 px-4 text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-md focus:shadow-outline hover:bg-indigo-800">Submit</button>          
+  return (
+    <PageBase>
+      <HeaderTitle className="relative top-10" title="Get Ready to Explore." />
+      <Container className="flex relative flex-col justify-center items-center h-screen">
+        <img alt="nxt.tech Register page" src="/assets/svgs/background.svg" className="w-full sm:block hidden abs-center" />
+        <section className="bg-white border z-10 shadow border-pc w-full md:w-9/12 lg:w-2/5 xl:w-4/12 p-4 rounded-pm mx-auto">
+          <form onSubmit={handleSubmit}>
+            <InputBox
+              label="Your Name"
+              name="userName"
+              placeholder="John Doe"
+              value={viewerRegistration.userName}
+              onChange={handleChange}
+            />
+            <InputBox
+              type="email"
+              label="Email Id"
+              name="EmailId"
+              placeholder="emailaddress@gmail.com"
+              value={viewerRegistration.EmailId}
+              onChange={handleChange}
+            />
+            <InputBox
+              label="Semester"
+              name="Semester"
+              type="number"
+              placeholder="Current Sem"
+              value={viewerRegistration.Semester}
+              onChange={handleChange}
+            />
+            <InputBox
+              label="Department"
+              name="department"
+              placeholder="Department"
+              value={viewerRegistration.department}
+              onChange={handleChange}
+            />
+            <InputBox
+              label="College Name"
+              name="collegeName"
+              placeholder="College Name"
+              value={viewerRegistration.collegeName}
+              onChange={handleChange}
+            />
+            <InputBox
+              label="How did you hear about NXT.Tech ?"
+              name="desc"
+              placeholder="i.e Linkedin, Whatsapp Group, Friend Suggested"
+              value={viewerRegistration.desc}
+              onChange={handleChange}
+            />
+            <button
+              type="submit"
+              className="w-full py-2 px-4 text-sm bg-primary text-white rounded-pm focus:shadow-outline"
+            >
+              Submit
+            </button>
           </form>
-
-        </div>
-    </div>
-  )
+        </section>
+      </Container>
+    </PageBase>
+  );
 };
 
 export default RegisterEvent;

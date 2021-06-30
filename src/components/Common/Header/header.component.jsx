@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu, X } from "react-feather";
 import { Link } from "react-router-dom";
 import { PrimaryButton } from "../Button/button.component";
@@ -7,6 +7,11 @@ import { Logo } from "../Logo/logo.component";
 
 export const Header = () => {
   const [menuToggle, setMenuToggle] = useState(false);
+
+  useEffect(() => {
+      
+  }, []);
+
   return (
     <>
       <nav style={{ height: "-10px" }} className="w-full border-b border-gr">

@@ -18,5 +18,6 @@ if(!firebase.app.length) {
 
 // Firebase Google Sign in Provider
 export const FirebaseAuthProvider = new firebase.auth.GoogleAuthProvider();
+export const FirebaseAuth  = firebase.auth();
 
 export const firebase;
