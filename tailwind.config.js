@@ -9,7 +9,8 @@ module.exports = {
         info: "#B2B2B2",
         gr: "#E0E0E0",
         primary: "#6C63FF",
-        grey: "grey"
+        grey: "grey",
+        pc:'#D7D7D7'
       },
       borderRadius: {
         pm: "2.5px",
@@ -24,7 +25,6 @@ module.exports = {
         xl: '6rem',
         '2xl': '8rem',
       },
-    },
     boxShadow: {
        DEFAULT: "0px 4px 50px rgba(255, 255, 255, 0.25)"
     }
