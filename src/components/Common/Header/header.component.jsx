@@ -22,12 +22,10 @@ export const Header = () => {
             <Link to="/#schedule" className="text-sm mx-5">
               Schedule
             </Link>
-            <PrimaryButton className="text-sm">Get your Ticket!</PrimaryButton>
+            <TicketButton />
           </div>
           <div className="sm:hidden flex">
-            <PrimaryButton className="text-xs mr-4">
-              Get your Ticket
-            </PrimaryButton>
+            <TicketButton />
             {!menuToggle ? (
               <Menu
                 onClick={(_) => setMenuToggle(true)}
@@ -46,5 +44,13 @@ export const Header = () => {
       </nav>
       <MobileHeader menuToggle={menuToggle} />
     </>
+  );
+};
+
+const TicketButton = () => {
+  return (
+    <Link to="/register-event">
+      <PrimaryButton className="text-xs mr-4">Get your Ticket</PrimaryButton>
+    </Link>
   );
 };

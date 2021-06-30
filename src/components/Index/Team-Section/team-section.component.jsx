@@ -1,6 +1,5 @@
 import { PrimaryButton } from "../../Common/Button/button.component";
 import { Container } from "../../Common/Container/container.component";
-import SectionTitle from "../../Common/Typography/section-title.component";
 
 export const TeamSection = () => {
   return (

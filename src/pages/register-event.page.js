@@ -2,7 +2,7 @@
 
 export const RegisterEvent = () => {
   return <div>
-      Register Event Form will be here
+      Register Event form will be here
       </div>;
 };
 
