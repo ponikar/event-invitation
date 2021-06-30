@@ -2,6 +2,20 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
+      colors: {
+        back: "#F8F8F8",
+        white: "#fff",
+        highlight: "#F2F2F2",
+        info: "#B2B2B2",
+        gr: "#E0E0E0",
+        primary: "#6C63FF",
+        grey: "grey",
+        pc:'#D7D7D7'
+      },
+      borderRadius: {
+        pm: "2.5px",
+        full: "100%"
+    },
     container: {
       center: true,
       padding: {
@@ -11,10 +25,8 @@ module.exports = {
         xl: '6rem',
         '2xl': '8rem',
       },
-      colors :{
-        pc:'#D7D7D7'
-      },
-     
+    boxShadow: {
+       DEFAULT: "0px 4px 50px rgba(255, 255, 255, 0.25)"
     }
   },
   variants: {

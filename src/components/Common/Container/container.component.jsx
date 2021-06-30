@@ -2,7 +2,7 @@
 
 
 export const Container = ({ className, children }) => {
-    return <section className={`${className} container`}>
+    return <section className={`${className} my-10 container`}>
         { children }
     </section>
 }
