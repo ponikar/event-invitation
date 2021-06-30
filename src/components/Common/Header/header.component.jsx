@@ -16,10 +16,10 @@ export const Header = () => {
             <Link to="/" className="text-sm mx-5">
               Home
             </Link>
-            <Link to="/" className="text-sm mx-5">
+            <Link to="/about" className="text-sm mx-5">
               About
             </Link>
-            <Link to="/" className="text-sm mx-5">
+            <Link to="/#schedule" className="text-sm mx-5">
               Schedule
             </Link>
             <PrimaryButton className="text-sm">Get your Ticket!</PrimaryButton>

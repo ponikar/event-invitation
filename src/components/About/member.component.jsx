@@ -11,7 +11,7 @@ export const Member = ({ last }) => {
      <img src="/assets/svgs/circle.svg" className="w-32 object-cover my-2" />
       <h2 className=""> Name </h2>
       <p className="mx-2 text-sm text-primary"> Android Developer </p>
-      <div className="flex text-grey text-sm justify-center w-full items-center">
+      <div className="flex text-grey text-sm mt-2 justify-center w-full items-center">
         <Mail {...IconProps}  /> |
         <Linkedin {...IconProps}  /> 
       </div>
