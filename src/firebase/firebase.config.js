@@ -11,8 +11,7 @@ import "firebase/auth"
   };
   
   
-
-if(!firebase.app.length) {
+if(!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
 }
 
@@ -20,4 +19,4 @@ if(!firebase.app.length) {
 export const FirebaseAuthProvider = new firebase.auth.GoogleAuthProvider();
 export const FirebaseAuth  = firebase.auth();
 
-export const firebase;
+export default firebase;

@@ -20,12 +20,12 @@ const DEFAULT_STATE = {
 const defaultHelpers = {
   isLoading: false,
   message: "",
-  success: false,
+  success: true,
 };
-export const RegisterEvent = () => {
+const RegisterEvent = () => {
   const [viewerRegistration, setViewerRegistration] = useState(DEFAULT_STATE);
   const [helpers, setHelpers] = useState(defaultHelpers);
-  useTitle("NXT.Tech | Regiser Event")
+  useTitle("NXT.Tech | Register Event")
   const { success } = helpers;
 
   const handleSubmit = useCallback(
@@ -60,13 +60,15 @@ export const RegisterEvent = () => {
   return (
     <PageBase>
       <HeaderTitle className="relative top-10" title="Get Ready to Explore." />
-      <Container className={`flex flex-col relative items-center h-screen`}>
-        <img
+      <Container className={`flex flex-col relative items-center ${!success && "justify-center"} h-screen`}>
+        {
+          !success && <img
           alt="nxt.tech Register page"
           src="/assets/svgs/background.svg"
-          className="w-full sm:block hidden abs-center"
+          className="w-full sm:hidden md:hidden lg:block abs-center"
         />
-       { !success ? <Ticket /> : <RegisterForm
+        }
+       { success ? <Ticket /> : <RegisterForm
           {...{ handleChange, handleSubmit, viewerRegistration, helpers }}
         />}
       </Container>

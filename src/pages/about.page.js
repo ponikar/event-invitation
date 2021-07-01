@@ -9,7 +9,7 @@ import { Container  } from "../components/Common/Container/container.component"
 import { Member } from "../components/About/member.component";
 import { useTitle } from "../hooks/useTitle.component";
 
-export const About = () => {
+const About = () => {
     useTitle("NXT.Tech | Community")
     return <PageBase>
         <HeaderTitle className="mt-24" title="Hello there! Meet with our Community." />

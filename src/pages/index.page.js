@@ -6,7 +6,7 @@ import { ScheduleSection } from "../components/Index/Schedule/schedule-section.c
 import { TeamSection } from "../components/Index/Team-Section/team-section.component";
 import { useTitle } from "../hooks/useTitle.component";
 
-export const Index = () => {
+const Index = () => {
   useTitle("NXT.Tech | Virtual Event");
   return (
      <>
@@ -19,3 +19,5 @@ export const Index = () => {
      </>
   );
 };
+
+export default Index;

@@ -4,12 +4,17 @@ import { Link } from "react-router-dom";
 import { PrimaryButton } from "../Button/button.component";
 import { MobileHeader } from "./mobile-header.component";
 import { Logo } from "../Logo/logo.component";
+import { FirebaseAuth } from "../../../firebase/firebase.config";
+import { setUserId } from "../../../helpers/storage.helpers";
 
 export const Header = () => {
   const [menuToggle, setMenuToggle] = useState(false);
 
   useEffect(() => {
-      
+      FirebaseAuth.onAuthStateChanged(user => {
+          if(user) return setUserId(user.uid);
+          return setUserId(null);
+      });
   }, []);
 
   return (
