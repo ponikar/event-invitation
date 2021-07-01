@@ -7,6 +7,7 @@ import { HeaderTitle } from "../components/Common/Typography/header-title.compon
 import { AnimatedParticles } from "../components/Common/Particles/particles.component";
 import { RegisterForm } from "../components/Register_Event/RegisterForm/register-form.component";
 import { useTitle } from "../hooks/useTitle.component";
+import { Ticket } from "../components/Register_Event/Ticket/ticket.component";
 
 const DEFAULT_STATE = {
   userName: "",
@@ -25,6 +26,7 @@ export const RegisterEvent = () => {
   const [viewerRegistration, setViewerRegistration] = useState(DEFAULT_STATE);
   const [helpers, setHelpers] = useState(defaultHelpers);
   useTitle("NXT.Tech | Regiser Event")
+  const { success } = helpers;
 
   const handleSubmit = useCallback(
     async (e) => {
@@ -54,21 +56,21 @@ export const RegisterEvent = () => {
     const { name, value } = e.target;
     setViewerRegistration({ ...viewerRegistration, [name]: value });
   };
-
+  
   return (
     <PageBase>
       <HeaderTitle className="relative top-10" title="Get Ready to Explore." />
-      <Container className="flex relative flex-col justify-center items-center h-screen">
+      <Container className={`flex flex-col relative items-center h-screen`}>
         <img
           alt="nxt.tech Register page"
           src="/assets/svgs/background.svg"
           className="w-full sm:block hidden abs-center"
         />
-        <RegisterForm
+       { !success ? <Ticket /> : <RegisterForm
           {...{ handleChange, handleSubmit, viewerRegistration, helpers }}
-        />
+        />}
       </Container>
-      {helpers.success && <AnimatedParticles />}
+      {success && <AnimatedParticles />}
     </PageBase>
   );
 };
