@@ -6,18 +6,17 @@ import "./ticket.style.css";
 const DEFAULT_IMAGE = "/assets/svgs/team.svg";
 export const Ticket = memo(
   ({ userName, Semester, department, collegeName }) => {
-  
-  const id = getUserId();
-  const [image, setImage] = useState(DEFAULT_IMAGE);
+    const id = getUserId();
+    const [image, setImage] = useState(DEFAULT_IMAGE);
 
-  useEffect(() => {
-      if(FirebaseAuth.currentUser) {
-        console.log("CURRENT", FirebaseAuth.currentUser);
-        const { currentUser: { photoURL } } = FirebaseAuth;
-          setImage(photoURL ? photoURL : DEFAULT_IMAGE);
+    useEffect(() => {
+      if (FirebaseAuth.currentUser) {
+        const {
+          currentUser: { photoURL },
+        } = FirebaseAuth;
+        setImage(photoURL ? photoURL : DEFAULT_IMAGE);
       }
-  }, [FirebaseAuth.currentUser]);
-
+    }, [FirebaseAuth.currentUser]);
 
     return (
       <svg
@@ -35,11 +34,7 @@ export const Ticket = memo(
             height="100%"
             viewBox="0 0 128 128"
           >
-            <image
-              width="128"
-              height="128"
-              href={image}
-            />
+            <image width="128" height="128" href={image} />
           </pattern>
         </defs>
         <rect
@@ -154,7 +149,7 @@ export const Ticket = memo(
           fontWeight="700"
         >
           <tspan x="0" y="0">
-            #{String(id).toUpperCase().substr(0,5)}
+            #{String(id).toUpperCase().substr(0, 5)}
           </tspan>
         </text>
         <text

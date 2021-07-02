@@ -15,14 +15,14 @@ export const Guest = () => {
   const signInWithGoogle = useCallback(async () => {
       try {
           setHelpers({ ...DEFAULT_HELPERS, isLoading: true });
-          const response = await doSignIn();
+          await doSignIn();
           setHelpers({ ...DEFAULT_HELPERS, message: "Redirecting...", success: true });
           window.location.reload();
       } catch(e) {
         setHelpers({ ...DEFAULT_HELPERS, message: "Something went wrong! Reload the page.", success: false });
          
       }
-  }, [helpers]);
+  }, []);
 
   return (
     <PageBase>

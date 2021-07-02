@@ -14,6 +14,7 @@ import {
 } from "../firebase/firestore";
 import { getUserId } from "../helpers/storage.helpers";
 import { LoadingWithContainer } from "../components/Common/Loading/loading.component";
+import { FirebaseAuth } from "../firebase/firebase.config";
 
 const DEFAULT_STATE = {
   userName: "",
@@ -32,6 +33,7 @@ const defaultHelpers = {
 };
 const RegisterEvent = () => {
   const [viewerRegistration, setViewerRegistration] = useState(DEFAULT_STATE);
+  const [showCelebrations, setShowCelebration] = useState(false);
   const [helpers, setHelpers] = useState(defaultHelpers);
   useTitle("NXT.Tech | Register Event");
   const { success } = helpers;
@@ -41,11 +43,24 @@ const RegisterEvent = () => {
     isEntryExists();
   }, []);
 
+  useEffect(() => {
+    if (success) {
+      setShowCelebration(true);
+      setTimeout(() => setShowCelebration(false), 5000);
+    }
+  }, [helpers.success]);
+
+  useEffect(() => {
+    if(FirebaseAuth.currentUser) {
+        setViewerRegistration({ ...viewerRegistration, EmailId: FirebaseAuth.currentUser })
+    }
+  }, [FirebaseAuth.currentUser]);
+
   const isEntryExists = async () => {
     const result = await isEntryExistsFirestore(uid);
     if (result) {
-      //  setViewerRegistration(result);
-      //  setHelpers({ ...helpers, success: true })
+      setViewerRegistration(result);
+      return setHelpers({ ...helpers, isLoadingExists: false, success: true });
     }
 
     setHelpers({ ...helpers, isLoadingExists: false });
@@ -56,14 +71,14 @@ const RegisterEvent = () => {
       e.preventDefault();
       try {
         setHelpers({ ...helpers, isLoading: true });
-        const response = await submitFormAPI(viewerRegistration);
+        await submitFormAPI(viewerRegistration);
         await storeFormFirestore(uid, viewerRegistration);
-        console.log("working");
         setHelpers({
           message: "Thank you, See you there!",
           isLoading: false,
           success: true,
         });
+        setShowCelebration(true);
       } catch (e) {
         console.log("FORM ERROR", e.message);
         setHelpers({
@@ -113,7 +128,7 @@ const RegisterEvent = () => {
               />
             )}
           </Container>
-          {success && <AnimatedParticles />}
+          {success && showCelebrations && <AnimatedParticles />}
         </>
       )}
     </PageBase>
