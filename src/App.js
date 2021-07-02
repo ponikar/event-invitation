@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
 import { LoadingWithContainer } from "./components/Common/Loading/loading.component";
+import { ProtectedRoutes } from "./components/Common/Routes/protected-routes.component";
 
 const About = lazy(() => import("./pages/about.page"));
 const RegisterEvent = lazy(() => import("./pages/register-event.page"));
@@ -17,11 +18,11 @@ const App = () => {
         <Switch>
           <Route exact path="/" component={Index} />
           <Route path="/about" component={About} />
-          <Route path="/register-event" component={RegisterEvent} />
+          <ProtectedRoutes path="/register-event" Component={RegisterEvent} />
         </Switch>
       </Suspense>
     </Router>
-  );
+  );  
 };
 
 export default App;

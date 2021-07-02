@@ -1,12 +1,4 @@
-import { FirebaseAuthProvider, firebase } from "./firebase.config";
+import firebase, { FirebaseAuthProvider } from "./firebase.config";
 
-export const doSignIn = async () => {
-  try {
-    const response = await firebase
-      .auth()
-      .signInWithPopup(FirebaseAuthProvider);
-    return response;
-  } catch (e) {
-    throw new Error(e.message);
-  }
-};
+export const doSignIn = () =>
+  firebase.auth().signInWithPopup(FirebaseAuthProvider);

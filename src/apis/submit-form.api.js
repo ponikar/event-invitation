@@ -9,6 +9,6 @@ export const submitFormAPI = (details) => {
             "Content-Type": "application/json",
             "X-Api-Key": "3VLgEvG6Ky@kx!wN__EpeevvSrX5QqQt2SSx!joGLH8sBrFiGBnspeeVNaaKdFib"
         },
-        body: JSON.stringify(details)
+        body: JSON.stringify({ ...details, createdAt: new Date().toLocaleString() })
     })
 }
