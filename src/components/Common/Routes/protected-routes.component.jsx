@@ -1,8 +1,9 @@
+import { memo } from "react";
 import { Route } from "react-router-dom";
 import { getUserId } from "../../../helpers/storage.helpers";
 import { Guest } from "./guest.component";
 
-export const ProtectedRoutes = ({ Component, ...props }) => {
+export const ProtectedRoutes = memo(({ Component, ...props }) => {
   const checkUser = (_) => {
     if (!getUserId()) {
       return <Guest />
@@ -11,4 +12,4 @@ export const ProtectedRoutes = ({ Component, ...props }) => {
   };
 
   return <Route render={checkUser} {...props} />;
-};
+});

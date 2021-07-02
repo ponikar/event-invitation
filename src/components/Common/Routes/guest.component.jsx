@@ -1,5 +1,6 @@
 import { useCallback, useState } from "react";
 import { doSignIn } from "../../../firebase/firebase.auth";
+import { useTitle } from "../../../hooks/useTitle.component";
 import { PrimaryButton } from "../Button/button.component";
 import { PageBase } from "../Page-Base/page-base.component";
 import SectionTitle from "../Typography/section-title.component";
@@ -12,6 +13,7 @@ const DEFAULT_HELPERS = {
 
 export const Guest = () => {
     const [helpers, setHelpers] = useState(DEFAULT_HELPERS);
+    useTitle("NXT.tech | Sign in")
   const signInWithGoogle = useCallback(async () => {
       try {
           setHelpers({ ...DEFAULT_HELPERS, isLoading: true });

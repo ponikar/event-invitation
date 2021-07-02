@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import { Menu, X } from "react-feather";
 import { Link } from "react-router-dom";
 import { PrimaryButton } from "../Button/button.component";
@@ -6,15 +6,17 @@ import { MobileHeader } from "./mobile-header.component";
 import { Logo } from "../Logo/logo.component";
 import { FirebaseAuth } from "../../../firebase/firebase.config";
 import { setUserId } from "../../../helpers/storage.helpers";
+import { SignOutButton } from "./sign-out.component";
 
 export const Header = () => {
   const [menuToggle, setMenuToggle] = useState(false);
 
   useEffect(() => {
-      FirebaseAuth.onAuthStateChanged(user => {
+     const unsubscribe = FirebaseAuth.onAuthStateChanged(user => {
           if(user) return setUserId(user.uid);
           return setUserId(null);
       });
+      return () => unsubscribe();
   }, []);
 
   return (
@@ -32,6 +34,7 @@ export const Header = () => {
             <Link to="/#schedule" className="text-sm mx-5">
               Schedule
             </Link>
+            <SignOutButton className="text-sm mx-5" />
             <TicketButton />
           </div>
           <div className="sm:hidden flex">
@@ -57,10 +60,10 @@ export const Header = () => {
   );
 };
 
-const TicketButton = () => {
+const TicketButton = memo(() => {
   return (
     <Link to="/register-event">
       <PrimaryButton className="text-xs mr-4">Get your Ticket</PrimaryButton>
     </Link>
   );
-};
+})
