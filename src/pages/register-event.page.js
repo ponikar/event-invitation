@@ -38,13 +38,13 @@ const RegisterEvent = () => {
   }, [helpers.success]);
 
   useEffect(() => {
-    if (FirebaseAuth.currentUser) {
+    if (!success && FirebaseAuth.currentUser) {
       setViewerRegistration({
         ...viewerRegistration,
         EmailId: FirebaseAuth.currentUser.email,
       });
     }
-  }, [FirebaseAuth.currentUser]);
+  }, [FirebaseAuth.currentUser, success]);
 
   const isEntryExists = async () => {
     const result = await isEntryExistsFirestore(uid);
@@ -93,15 +93,14 @@ const RegisterEvent = () => {
         <LoadingWithContainer />
       ) : (
         <>
-          {" "}
           <HeaderTitle
-            className="relative top-10"
+            className="relative mt-10"
             title="Get Ready to Explore."
           />
           <Container
             className={`flex flex-col relative items-center ${
-              !success && "justify-center"
-            } h-screen`}
+              !success ? "justify-center" : "h-screen"
+            }`}
           >
             {!success && (
               <img
