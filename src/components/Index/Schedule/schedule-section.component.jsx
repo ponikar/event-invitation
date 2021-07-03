@@ -5,7 +5,7 @@ import { ScheduleBlock } from "./schedule-block.component";
 
 
 export const ScheduleSection = () => {
-    return <Container>
+    return <Container id="schedule">
         <SectionTitle title="Schedule" />
         <div className="flex sm:w-9/12 mx-auto border justify-center items-center sm:flex-row flex-col gap-5">
           <ScheduleCol>

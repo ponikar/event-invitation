@@ -9,7 +9,10 @@ module.exports = {
         info: "#B2B2B2",
         gr: "#E0E0E0",
         primary: "#6C63FF",
-        grey: "grey"
+        grey: "grey",
+        pc:'#D7D7D7',
+        green: "green",
+        red: "red"
       },
       borderRadius: {
         pm: "2.5px",

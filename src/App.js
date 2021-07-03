@@ -1,7 +1,11 @@
+import { lazy, Suspense } from "react";
 import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
-import About from "./pages/about.page";
-import { Index } from "./pages/index.page";
-import RegisterEvent from "./pages/register-event.page";
+import { LoadingWithContainer } from "./components/Common/Loading/loading.component";
+import { ProtectedRoutes } from "./components/Common/Routes/protected-routes.component";
+
+const About = lazy(() => import("./pages/about.page"));
+const RegisterEvent = lazy(() => import("./pages/register-event.page"));
+const Index = lazy(() => import("./pages/index.page"));
 
 /* 
   3 Pages
@@ -10,13 +14,15 @@ import RegisterEvent from "./pages/register-event.page";
 const App = () => {
   return (
     <Router>
-      <Switch>
-        <Route exact path="/" component={Index} />
-        <Route path="/about" component={About} />
-        <Route path="/register-event" component={RegisterEvent} />
-      </Switch>
+      <Suspense fallback={<LoadingWithContainer />}>
+        <Switch>
+          <Route exact path="/" component={Index} />
+          <Route path="/about" component={About} />
+          <ProtectedRoutes path="/register-event" Component={RegisterEvent} />
+        </Switch>
+      </Suspense>
     </Router>
-  );
+  );  
 };
 
 export default App;
