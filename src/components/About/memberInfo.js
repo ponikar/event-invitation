@@ -75,7 +75,7 @@
         },
         {
          "id":"7",   
-         "name":"Hirshika Rai",
+         "name":"Hrishika Rai",
          "profile_url":"https://firebasestorage.googleapis.com/v0/b/invitation-55ec8.appspot.com/o/members%2Fhrishika_rai.jpeg?alt=media&token=6f136a51-4a45-4c33-8ec7-daf22e275286",
          "linked_url":"https://www.linkedin.com/in/hrishika-rai",
          "email":"hirshika.180180107052@gmail.com",

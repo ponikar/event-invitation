@@ -19,7 +19,7 @@ export const AllMember =() =>{
 
         <Container className="grid sm:grid-cols-5 grid-cols-2 sm:w-8/12 w-full">
             {
-                Members.slice(4,9).map((member,index)=><Member key={index} {...member}/>)
+                Members.slice(4,9).map((member,index)=><Member last={index === Members.slice(4,9).length - 1} key={index} {...member}/>)
             }
         </Container>
 
