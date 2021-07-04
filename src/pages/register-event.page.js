@@ -99,7 +99,7 @@ const RegisterEvent = () => {
           />
           <Container
             className={`flex flex-col relative items-center ${
-              !success ? "justify-center" : "h-screen"
+              !success && "h-screen"
             }`}
           >
             {!success && (
