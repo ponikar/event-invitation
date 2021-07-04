@@ -22,6 +22,10 @@ export const Header = () => {
             <Link to="/#schedule" className="text-sm mx-5">
               Schedule
             </Link>
+            <Link to="/blog" className="text-sm mx-5">
+              Blog
+            </Link>
+
             <PrimaryButton className="text-sm">Get your Ticket!</PrimaryButton>
           </div>
           <div className="sm:hidden flex">
