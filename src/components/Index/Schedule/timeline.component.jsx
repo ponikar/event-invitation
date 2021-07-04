@@ -10,11 +10,11 @@ export const ScheduleTimeLine = ({ type = undefined }) => {
 
 
 const TimeLinePoint = () => {
-    return <div className="p-1 border-2 relative border-info bg-back rounded-full">
-    <div className="p-1 rounded-full bg-info" />
+    return <div className="p-1 border-2 relative border-primary bg-back rounded-full">
+    <div className="p-1 rounded-full bg-primary" />
   </div>
 }
 
 const TimeLine = ({ down }) => {
-    return  <div className={`border-2 border-info w-1 ${down ? "h-11": "h-8"}`} />
+    return  <div className={`border-2 border-primary w-1 ${down ? "h-11": "h-8"}`} />
 }
