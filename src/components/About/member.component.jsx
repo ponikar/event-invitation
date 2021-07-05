@@ -43,7 +43,7 @@ export const Member = ({
         )}
 
         {twitter_url && (
-          <a href={linked_url} rel="noreferrer" target="_blank">
+          <a href={twitter_url} rel="noreferrer" target="_blank">
             <Twitter {...IconProps} />
           </a>
         )}

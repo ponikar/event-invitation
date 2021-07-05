@@ -4,7 +4,7 @@
             "id":"1",
             "name":"Darshan Ponikar",
             "profile_url":"https://firebasestorage.googleapis.com/v0/b/invitation-55ec8.appspot.com/o/members%2Fdarshan.jpeg?alt=media&token=2c7f3a83-0d07-49e1-9974-e2d8d5ecb43c",
-            "linked_url":"linkedin.com/in/ponikar/",
+            "linked_url":"https://linkedin.com/in/ponikar/",
             "twitter_url":"https://twitter.com/iponikar",
             "email":"itsponikar@gmail.com",
             "role":"FullStack Engineer "
