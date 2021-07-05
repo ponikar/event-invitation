@@ -8,7 +8,7 @@ export const ArticleTitle = ({ title, className }) => {
 }
 
 export const Paragraph = ({ children, className }) => {
-    return <p className={`${className} font-semibold text-base`}>
+    return <p className={`${className} font-semibold text-base`} >
         { children }
     </p>
 }
