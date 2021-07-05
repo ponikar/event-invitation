@@ -1,4 +1,4 @@
-import { Mail, Linkedin } from "react-feather";
+import { Mail, Linkedin, Twitter } from "react-feather";
 
 const IconProps = {
   className: "text-grey cursor-pointer mx-2",
@@ -12,6 +12,7 @@ export const Member = ({
   profile_url,
   email,
   linked_url,
+  twitter_url
 }) => {
   return (
     <div
@@ -38,6 +39,12 @@ export const Member = ({
         {linked_url && (
           <a href={linked_url} rel="noreferrer" target="_blank">
             <Linkedin {...IconProps} />
+          </a>
+        )}
+
+        {twitter_url && (
+          <a href={linked_url} rel="noreferrer" target="_blank">
+            <Twitter {...IconProps} />
           </a>
         )}
       </div>

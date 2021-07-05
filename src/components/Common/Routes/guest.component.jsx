@@ -52,8 +52,9 @@ export const Guest = () => {
         <img
           alt="Event"
           loading="lazy"
-          src="/assets/svgs/team.svg"
-          className="lg:w-4/12 w-11/12 my-8"
+          src="/assets/svgs/que.svg"
+          className="my-8"
+          style={{ width: "400px" }}
         />
       </section>
     </PageBase>

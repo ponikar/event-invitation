@@ -12,11 +12,11 @@ export const Header = () => {
   const [menuToggle, setMenuToggle] = useState(false);
 
   useEffect(() => {
-     const unsubscribe = FirebaseAuth.onAuthStateChanged(user => {
-          if(user) return setUserId(user.uid);
-          return setUserId(null);
-      });
-      return () => unsubscribe();
+    const unsubscribe = FirebaseAuth.onAuthStateChanged((user) => {
+      if (user) return setUserId(user.uid);
+      return setUserId(null);
+    });
+    return () => unsubscribe();
   }, []);
 
   return (
@@ -34,12 +34,12 @@ export const Header = () => {
             <Link to="/#schedule" className="text-sm mx-5">
               Schedule
             </Link>
-            <SignOutButton className="text-sm mx-5" />
             <Link to="/blog" className="text-sm mx-5">
               Blog
             </Link>
+            <SignOutButton className="text-sm mx-5" />
 
-            <PrimaryButton className="text-sm">Get your Ticket!</PrimaryButton>
+            <TicketButton />
           </div>
           <div className="sm:hidden flex">
             <TicketButton />
@@ -70,4 +70,4 @@ const TicketButton = memo(() => {
       <PrimaryButton className="text-xs mr-4">Get your Ticket</PrimaryButton>
     </Link>
   );
-})
+});

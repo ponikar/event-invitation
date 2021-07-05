@@ -5,6 +5,7 @@
             "name":"Darshan Ponikar",
             "profile_url":"https://firebasestorage.googleapis.com/v0/b/invitation-55ec8.appspot.com/o/members%2Fdarshan.jpeg?alt=media&token=2c7f3a83-0d07-49e1-9974-e2d8d5ecb43c",
             "linked_url":"linkedin.com/in/ponikar/",
+            "twitter_url":"https://twitter.com/iponikar",
             "email":"itsponikar@gmail.com",
             "role":"FullStack Engineer "
          },
@@ -38,6 +39,7 @@
            "name":"Rohit Jangid",
            "profile_url":"https://firebasestorage.googleapis.com/v0/b/invitation-55ec8.appspot.com/o/members%2Frohit_jangid.jpg?alt=media&token=b7322411-8e31-43be-bfb2-44cbcda87c26",
            "linked_url":"https://www.linkedin.com/in/iamrohit21/",
+           "twitter_url":"https://twitter.com/iamrohit21",
            "email":"iamrohitjangid21@gmail.com",
            "role":"Android Developer"   
         },
@@ -46,6 +48,7 @@
            "name":"Amisha Purswani",
            "profile_url":"https://firebasestorage.googleapis.com/v0/b/invitation-55ec8.appspot.com/o/members%2FAmisha.jpg?alt=media&token=c3ab66a3-3542-416a-823c-613acbe433d5",
            "linked_url":"https://www.linkedin.com/in/amisha-purswani/",
+           "twitter_url":"https://twitter.com/AmishaPurswani",
            "email":"amishapurushwani@gmail.com",
            "role":"MERN Developer"   
         },
@@ -70,6 +73,7 @@
            "name":"Ankit Tailor",
            "profile_url":"https://firebasestorage.googleapis.com/v0/b/invitation-55ec8.appspot.com/o/members%2Fankit_tailor.jpg?alt=media&token=a77b1bb7-5194-4068-8130-ddde46d93034",
            "linked_url":"https://www.linkedin.com/in/ankit-tailor/",
+           "twitter_url":"https://twitter.com/ankit__tailor",
            "email":"tailorankit3345@gmail.com",
            "role":"Frontend Engineer"   
         },
@@ -94,6 +98,7 @@
            "name":"Dhruvil Panchal",
            "profile_url":"https://firebasestorage.googleapis.com/v0/b/invitation-55ec8.appspot.com/o/members%2Fdhruvil_panchal.jfif?alt=media&token=245d4dde-7a0b-455c-89ad-e6ce1d29d587",
            "linked_url":"",
+           "twitter_url": "https://twitter.com/_dpcodes",
            "email":"dhruvilpanchal221@gmail.com",
            "role":"Android Developer"   
         },
