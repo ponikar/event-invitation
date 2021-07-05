@@ -6,7 +6,7 @@ import {
 } from "../components/Common/Typography/article.component";
 import { BlogArticle } from "../data/blog.data";
 
-export const Blog = () => {
+const Blog = () => {
   return (
     <PageBase>
       <Container className="sm:w-7/12 w-11/12">
@@ -23,3 +23,6 @@ export const Blog = () => {
     </PageBase>
   );
 };
+
+
+export default Blog;

@@ -16,7 +16,7 @@ export const Member = ({
   return (
     <div
       className={`w-full flex flex-col items-center text-center p-2 ${
-        last && "sm:col-span-1 col-span-2"
+        last && "lg:col-span-1 col-span-2"
       }`}
     >
       <img
