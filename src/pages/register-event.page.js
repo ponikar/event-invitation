@@ -15,11 +15,15 @@ import {
 import { getUserId } from "../helpers/storage.helpers";
 import { LoadingWithContainer } from "../components/Common/Loading/loading.component";
 import { FirebaseAuth } from "../firebase/firebase.config";
-import { defaultHelpers, DEFAULT_REGISTER_STATE } from "../components/Register_Event/register-event.states";
-
+import {
+  defaultHelpers,
+  DEFAULT_REGISTER_STATE,
+} from "../components/Register_Event/register-event.states";
 
 const RegisterEvent = () => {
-  const [viewerRegistration, setViewerRegistration] = useState(DEFAULT_REGISTER_STATE);
+  const [viewerRegistration, setViewerRegistration] = useState(
+    DEFAULT_REGISTER_STATE
+  );
   const [showCelebrations, setShowCelebration] = useState(false);
   const [helpers, setHelpers] = useState(defaultHelpers);
   useTitle("NXT.Tech | Register Event");
