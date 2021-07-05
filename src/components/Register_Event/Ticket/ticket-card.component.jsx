@@ -3,7 +3,8 @@ import { FirebaseAuth } from "../../../firebase/firebase.config";
 import { getUserId } from "../../../helpers/storage.helpers";
 
 const DEFAULT_IMAGE = "/assets/svgs/default.svg";
-export const TicketCard = memo(({ userName = "", Semester, department, collegeName }) => {
+export const TicketCard = memo(
+  ({ userName = "", Semester, department }) => {
     const id = getUserId();
     const [image, setImage] = useState(DEFAULT_IMAGE);
 
@@ -63,31 +64,31 @@ export const TicketCard = memo(({ userName = "", Semester, department, collegeNa
         <text
           id="Rohit_Jangid"
           transform="translate(2223 636)"
-          fontSize="35"
-          fontFamily="SegoeUI-Bold, Segoe UI"
-          fontWeight="700"
-        >
-          <tspan x="0" y="38">
-            {userName.split(" ")[0]}
-          </tspan>
-        </text>
-        <text
-          id="Sem_7_Computer"
-          data-name="Sem 7 | Computer"
-          transform="translate(2223 683)"
-          fill="#565353"
           fontSize="24"
           fontFamily="SegoeUI-Bold, Segoe UI"
           fontWeight="700"
         >
+          <tspan x="0" y="38">
+            {userName}
+          </tspan>
+        </text>
+        <text
+          id="Sem_7_Computer"
+          data-name="Sem 7"
+          transform="translate(2223 683)"
+          fill="#565353"
+          fontSize="20"
+          fontFamily="SegoeUI-Bold, Segoe UI"
+          fontWeight="700"
+        >
           <tspan x="0" y="26">
-            Sem {Semester} | {department}
+            Sem {Semester}
           </tspan>
         </text>
         <text
           id="Nxt.TECH"
           transform="translate(2167 775)"
-          fontSize="40"
+          fontSize="35"
           fontFamily="SegoeUI-Bold, Segoe UI"
           fontWeight="700"
         >
@@ -105,7 +106,7 @@ export const TicketCard = memo(({ userName = "", Semester, department, collegeNa
           fontWeight="700"
         >
           <tspan x="0" y="0">
-            {collegeName}
+            {department}
           </tspan>
         </text>
         <rect
@@ -179,4 +180,5 @@ export const TicketCard = memo(({ userName = "", Semester, department, collegeNa
         </text>
       </svg>
     );
-  });
+  }
+);
