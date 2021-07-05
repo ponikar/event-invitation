@@ -6,6 +6,7 @@ export const TeamSection = () => {
     <Container className="grid mt-40 sm:grid-cols-2 gap-8">
       <img
         src="/assets/svgs/team.svg"
+        alt="svg_Image"
         className="w-8/12 mx-auto object-contain"
       />
       <div className="flex flex-col items-center justify-center">

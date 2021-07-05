@@ -35,7 +35,11 @@ export const Header = () => {
               Schedule
             </Link>
             <SignOutButton className="text-sm mx-5" />
-            <TicketButton />
+            <Link to="/blog" className="text-sm mx-5">
+              Blog
+            </Link>
+
+            <PrimaryButton className="text-sm">Get your Ticket!</PrimaryButton>
           </div>
           <div className="sm:hidden flex">
             <TicketButton />
