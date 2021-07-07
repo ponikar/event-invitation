@@ -23,6 +23,7 @@ export const Member = ({
       <img
         src={profile_url}
         alt="member"
+        loading="lazy"
         className="w-28 h-28 border border-gr object-contain rounded-full my-2"
       />
       <h2 className="text-sm" style={{ fontSize: "11px" }}>

@@ -31,9 +31,9 @@ export const Header = () => {
             <Link to="/about" className="text-sm mx-5">
               About
             </Link>
-            <Link to="/#schedule" className="text-sm mx-5">
+            {/* <Link to="/#schedule" className="text-sm mx-5">
               Schedule
-            </Link>
+            </Link> */}
             <Link to="/blog" className="text-sm mx-5">
               Blog
             </Link>
