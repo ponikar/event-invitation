@@ -15,7 +15,7 @@ export const SignOutButton = ({ className }) => {
           setIsLoading(false);
         }
       }
-  }, []);
+  }, [loading]);
   return (
     FirebaseAuth.currentUser && (
       <a onClick={onClick} className={`${className} cursor-pointer`}>

@@ -9,6 +9,7 @@ export const AddToCalender = memo(({ className }) => {
       href={eventURL}
       target="_blank"
       className={className}
+      rel="noreferrer"
     >
       <PrimaryButton>
         Add to Calender <Calendar size={18} className="text-black ml-2" />{" "}

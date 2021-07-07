@@ -6,8 +6,8 @@ export const Footer = () => {
       <Logo />
       <div className="sm:my-0 my-2">
         <h5 className="text-center text-hl"> Join Discord </h5>
-        <a href="https://discord.gg/BxY2z4WHP8" target="_blank">
-          <img src="/assets/svgs/discord.svg" className="w-10 mx-auto" />
+        <a  rel="noreferrer" href="https://discord.gg/BxY2z4WHP8" target="_blank">
+          <img alt="Nxt.tech on Discord" src="/assets/svgs/discord.svg" className="w-10 mx-auto" />
         </a>
       </div>
     </footer>

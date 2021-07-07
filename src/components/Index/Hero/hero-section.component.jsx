@@ -3,7 +3,7 @@ import { HeaderTitle } from "../../Common/Typography/header-title.component";
 export const HeroSection = () => {
   return (
     <section className="flex flex-col justify-center mt-24 p-5 items-center">
-      <HeaderTitle title="This will be a tagline which address people nicely" />
+      <HeaderTitle title="Begining of Journey to become Perfect Engineer!" />
       <AddToCalender className="my-12" />
       <img
         alt="Event"

@@ -1,7 +1,7 @@
 export const ScheduleTimeLine = ({ type = undefined }) => {
   return (
-    <div className={`mx-2 flex-col flex ${type === "start" ? "justify-start" : type === "end" ? "justify-start" : "justify-center" } items-center h-24`}>
-       { type !== "start" && <TimeLine /> }
+    <div className={`mx-2 flex-col flex ${type === "start" ? "justify-end" : type === "end" ? "justify-start" : "justify-center" } items-center h-24`}>
+       { type !== "start" && <TimeLine />  }
             <TimeLinePoint />
       { type !== "end" && <TimeLine down /> }
     </div>
@@ -16,5 +16,5 @@ const TimeLinePoint = () => {
 }
 
 const TimeLine = ({ down }) => {
-    return  <div className={`border-2 border-primary w-1 ${down ? "h-11": "h-8"}`} />
+    return  <div className={`border-2 bg-primary border-primary w-1 ${down ? "h-11": "h-8"}`} />
 }

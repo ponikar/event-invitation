@@ -100,12 +100,12 @@
            "linked_url":"",
            "twitter_url": "https://twitter.com/_dpcodes",
            "email":"dhruvilpanchal221@gmail.com",
-           "role":"Android Developer"   
+           "role":"Cloud Engineer"   
         },
         
         {
            "id":"11",
-           "name":"Sreeram Velagala",
+           "name":"V. Sreeram Reddy",
            "profile_url":"https://firebasestorage.googleapis.com/v0/b/invitation-55ec8.appspot.com/o/members%2Fsreeram.jpeg?alt=media&token=52d5b101-1e92-4a1f-8fea-d69a77a63cdb",
            "linked_url":"https://www.linkedin.com/in/sreeram-17ba861a4",
            "email":"sreeramrdy@gmail.com",
