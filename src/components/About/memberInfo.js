@@ -162,8 +162,13 @@
          "email":"maheshkshirsagar128@gmail.com",
          "role":"Web Developer"   
       }, 
-   
-   
-   
+      {
+         "id":"19",
+         "name":"Dharmesh Patel",
+         "profile_url":"https://firebasestorage.googleapis.com/v0/b/invitation-55ec8.appspot.com/o/members%2Fdharmesh.jpeg?alt=media&token=8cf46638-a8fe-4bcd-8b69-1efb7e7522c4",
+         "linked_url":"https://www.linkedin.com/in/dharmesh-patel-6bb2b4202",
+         "email":"dp837533@gmail.com",
+         "role":"Front-end Developer"   
+      }
     ]
    

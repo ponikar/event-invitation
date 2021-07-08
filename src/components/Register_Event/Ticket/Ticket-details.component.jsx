@@ -1,4 +1,5 @@
 import { memo } from "react";
+import { DISCORD_URL } from "../../../globals";
 import { AddToCalender } from "../../Common/AddToCalender/add-to-calender.component";
 import { Container } from "../../Common/Container/container.component";
 export const TicketDetails = memo(() => {
@@ -8,7 +9,7 @@ export const TicketDetails = memo(() => {
       <h2> For more updates join our Discord Community! You will receive confirmation email soon. </h2>
       <h2> Don't forget to checkout Schedule </h2>
 
-      <a href="https://discord.gg/BxY2z4WHP8" rel="noreferrer"  target="_blank">
+      <a href={DISCORD_URL} rel="noreferrer"  target="_blank">
         <img
           src="/assets/svgs/discord.svg"
           alt="nxt.tech on Discord"
