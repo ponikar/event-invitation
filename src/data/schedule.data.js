@@ -46,7 +46,7 @@ export const secondBlock = [{
 }, {
     presenter_name: "Akash Pamnani",
     presenter_url: "https://firebasestorage.googleapis.com/v0/b/invitation-55ec8.appspot.com/o/members%2Fakash.jpeg?alt=media&token=e332556e-83da-4798-b468-b276b1c64c3f",
-    title: "Introduction to Java",
+    title: "Serverless with Firebase",
     time: "11:15 to 11:35"
 }, {
     presenter_name: "Priyanka Niranjani",
