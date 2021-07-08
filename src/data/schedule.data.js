@@ -50,7 +50,7 @@ export const secondBlock = [{
     time: "11:15 to 11:35"
 }, {
     presenter_name: "Priyanka Niranjani",
-    presenter_url: "https://firebasestorage.googleapis.com/v0/b/invitation-55ec8.appspot.com/o/members%2Fchirayu.png?alt=media&token=e2cf256a-3296-4ee8-b36f-b1589674eaf3",
+    presenter_url: "https://firebasestorage.googleapis.com/v0/b/invitation-55ec8.appspot.com/o/members%2Fpriyanka.jpg?alt=media&token=85086a4b-0fa3-4d52-aecc-cdb35390e63b",
     title: "HR Talk!",
     time: "11:40 to 11:55"
 }, {

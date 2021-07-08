@@ -112,6 +112,14 @@
            "role":"ML Engineer"   
         },
         {
+         "id":"20",
+         "name":"Priyanka Niranjani",
+         "profile_url":"https://firebasestorage.googleapis.com/v0/b/invitation-55ec8.appspot.com/o/members%2Fpriyanka.jpg?alt=media&token=85086a4b-0fa3-4d52-aecc-cdb35390e63b",
+         "linked_url":"https://www.linkedin.com/in/priyanka-niranjani-898a89178/",
+         "email":"piyu13698@gmail.com",
+         "role":"Human Resource"   
+      },
+        {
          "id":"12",
          "name":"Roshan Yadav",
          "profile_url":"https://firebasestorage.googleapis.com/v0/b/invitation-55ec8.appspot.com/o/members%2Froshan.jpeg?alt=media&token=344e9b3b-659d-44dc-b532-25f89f86ae4c",

@@ -162,7 +162,7 @@ export const TicketCard = memo(
           fontWeight="700"
         >
           <tspan x="0" y="0">
-            15th &amp; 16th of July
+            17th &amp; 18th of July
           </tspan>
         </text>
         <text
@@ -175,7 +175,7 @@ export const TicketCard = memo(
           fontWeight="700"
         >
           <tspan x="0" y="0">
-            10:00 AM to 12:00 AM
+            10:00 AM to 12:00 PM
           </tspan>
         </text>
       </svg>
