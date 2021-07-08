@@ -125,7 +125,7 @@
          "profile_url":"https://firebasestorage.googleapis.com/v0/b/invitation-55ec8.appspot.com/o/members%2Froshan.jpeg?alt=media&token=344e9b3b-659d-44dc-b532-25f89f86ae4c",
          "linked_url":"https://www.linkedin.com/in/beginners101/",
          "email":"yadavroshan6908@gmail.com",
-         "role":"ComputerEngineer"   
+         "role":"Computer Engineer"   
        },
        {
           "id":"13",
