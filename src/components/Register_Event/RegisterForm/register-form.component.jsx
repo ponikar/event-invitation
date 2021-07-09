@@ -25,6 +25,7 @@ export const RegisterForm = ({
           placeholder="emailaddress@gmail.com"
           value={viewerRegistration.EmailId}
           onChange={handleChange}
+          disabled={true}
         />
         <InputBox
           label="Semester"
