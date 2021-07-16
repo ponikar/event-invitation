@@ -2,10 +2,14 @@ import { AddToCalender } from "../../Common/AddToCalender/add-to-calender.compon
 import { HeaderTitle } from "../../Common/Typography/header-title.component";
 export const HeroSection = () => {
   return (
-    <section className="flex flex-col justify-center mt-24 p-5 items-center">
+    <section
+      data-testid="main-header"
+      className="flex flex-col justify-center mt-24 p-5 items-center"
+    >
       <HeaderTitle title="Virtual Event to Explore Extraordinary stuff." />
       <AddToCalender className="my-12" />
       <img
+        data-testid="main-image"
         alt="Event"
         loading="lazy"
         src="/assets/svgs/hero.svg"

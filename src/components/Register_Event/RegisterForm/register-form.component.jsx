@@ -17,11 +17,13 @@ export const RegisterForm = ({
           placeholder="John Doe"
           value={viewerRegistration.userName}
           onChange={handleChange}
+          data-testid="userName"
         />
         <InputBox
           type="email"
           label="Email Id"
           name="EmailId"
+          data-testid="EmailId"
           placeholder="emailaddress@gmail.com"
           value={viewerRegistration.EmailId}
           onChange={handleChange}
@@ -30,6 +32,7 @@ export const RegisterForm = ({
         <InputBox
           label="Semester"
           name="Semester"
+          data-testid="Semester"
           type="number"
           placeholder="Current Sem"
           value={viewerRegistration.Semester}
@@ -38,6 +41,7 @@ export const RegisterForm = ({
         <InputBox
           label="Department"
           name="department"
+          data-testid="department"
           placeholder="Department"
           value={viewerRegistration.department}
           onChange={handleChange}
@@ -45,6 +49,7 @@ export const RegisterForm = ({
         <InputBox
           label="College Name"
           name="collegeName"
+          data-testid="collegeName"
           placeholder="College Name"
           value={viewerRegistration.collegeName}
           onChange={handleChange}
@@ -52,6 +57,7 @@ export const RegisterForm = ({
         <InputBox
           label="How did you hear about NXT.Tech ?"
           name="desc"
+          data-testid="desc"
           placeholder="i.e Linkedin, Whatsapp Group, Friend Suggested"
           value={viewerRegistration.desc}
           onChange={handleChange}

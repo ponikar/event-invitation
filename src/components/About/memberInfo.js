@@ -169,6 +169,15 @@
          "linked_url":"https://www.linkedin.com/in/dharmesh-patel-6bb2b4202",
          "email":"dp837533@gmail.com",
          "role":"Front-end Developer"   
-      }
+      },
+      {
+         "id":"20",
+         "name":"Gaurav Raina",
+         "profile_url":" https://firebasestorage.googleapis.com/v0/b/invitation-55ec8.appspot.com/o/members%2Fguru.jpeg?alt=media&token=90724e8d-253a-40f1-930e-9ca31167471c",
+         "linked_url":"https://www.linkedin.com/in/gouravraina",
+         "email":"gouravraina34@gmail.com",
+         "role":"Youtuber"   
+      },
+     
     ]
    
