@@ -46,7 +46,7 @@
         {
            "id":"6",
            "name":"Amisha Purswani",
-           "profile_url":"https://firebasestorage.googleapis.com/v0/b/invitation-55ec8.appspot.com/o/members%2FAmisha.jpg?alt=media&token=c3ab66a3-3542-416a-823c-613acbe433d5",
+           "profile_url":"https://firebasestorage.googleapis.com/v0/b/invitation-55ec8.appspot.com/o/members%2Famisha.jpg?alt=media&token=bbbbbf36-ef72-4861-8964-7c9a218be6a2",
            "linked_url":"https://www.linkedin.com/in/amisha-purswani/",
            "twitter_url":"https://twitter.com/AmishaPurswani",
            "email":"amishapurushwani@gmail.com",

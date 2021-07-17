@@ -74,10 +74,10 @@ export const secondBlock = [
     time: "11:10 to 11:25",
   },
   {
-    presenter_name: "Priyanka Niranjani",
+    presenter_name: "Amisha Purswani",
     presenter_url:
-      "https://firebasestorage.googleapis.com/v0/b/invitation-55ec8.appspot.com/o/members%2Fpriyanka.jpg?alt=media&token=85086a4b-0fa3-4d52-aecc-cdb35390e63b",
-    title: "HR Talk!",
+      "https://firebasestorage.googleapis.com/v0/b/invitation-55ec8.appspot.com/o/members%2Famisha.jpg?alt=media&token=bbbbbf36-ef72-4861-8964-7c9a218be6a2",
+    title: "Importance of DSA and CP",
     time: "11:35 to 11:50",
   },
   {
@@ -88,17 +88,17 @@ export const secondBlock = [
     time: "11:50 to 12:05",
   },
   {
-    presenter_name: "Vishamber Das",
-    presenter_url:
-      "https://firebasestorage.googleapis.com/v0/b/invitation-55ec8.appspot.com/o/members%2FVish.JPG?alt=media&token=5820a42d-54c9-45c7-8bb2-8b5ae368b2cc",
-    title: "Talk of Leadership",
-    time: "12:15 to 12:30",
-  },
-  {
     presenter_name: "Roshan Yadav",
     presenter_url:
-      "https://firebasestorage.googleapis.com/v0/b/invitation-55ec8.appspot.com/o/members%2Froshan.jpeg?alt=media&token=344e9b3b-659d-44dc-b532-25f89f86ae4c",
+    "https://firebasestorage.googleapis.com/v0/b/invitation-55ec8.appspot.com/o/members%2Froshan.jpeg?alt=media&token=344e9b3b-659d-44dc-b532-25f89f86ae4c",
     title: "Cyber Attack & National Security",
-    time: "12:30 to 12:50",
+    time: "12:15 to 12:35",
+  },
+  {
+    presenter_name: "Raj Kailash Tiwari",
+    presenter_url:
+      "https://firebasestorage.googleapis.com/v0/b/invitation-55ec8.appspot.com/o/members%2Fraj.jpeg?alt=media&token=2f34a3c1-1924-4b93-b1fa-6c1e533d4581",
+    title: "Introduction of DBMS",
+    time: "12:35 to 12:50",
   },
 ];
