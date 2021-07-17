@@ -178,6 +178,14 @@
          "email":"gouravraina34@gmail.com",
          "role":"Youtuber"   
       },
+      {
+         "id":"22",
+         "name":"Raj Kailash Tiwari",
+         "profile_url": "https://firebasestorage.googleapis.com/v0/b/invitation-55ec8.appspot.com/o/members%2Fraj.jpeg?alt=media&token=2f34a3c1-1924-4b93-b1fa-6c1e533d4581",
+         "linked_url":"www.linkedin.com/in/rajkalashtiwari",
+         "email":"rajkalashtiwari@gmail.com",
+         "role":"Front-end Developer"   
+      },
      
     ]
    
